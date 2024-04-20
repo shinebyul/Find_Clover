@@ -33,7 +33,7 @@ export default function Home() {
                 {widths.map((width, index) => (
                     <img
                         key={index}
-                        src={index === 4 || index === 12 || index === 23 || index === 42 ? "/four.png" : "/three.png"}
+                        src={index === 4 || index === 12 || index === 23 || index === 42 ? "/four.PNG" : "/three.PNG"}
                         style={{ width }}
                         className={`${clickedIndex === index ? 'clicked' : ''} ${shake?'shake-all':''}`}
                         onClick={() => handleCloverClick(index)}
