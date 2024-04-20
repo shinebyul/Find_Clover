@@ -1,27 +1,184 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body{
+  margin: 0;
+  padding: 0;
+}
+.grass{
+  background-color: rgb(99, 164, 105);
+  height: auto;
+  min-height: 100vh;
+  width: 100vw;
+  padding: 20%;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+.grass > img{
+  position: absolute;
+}
+.title>img{
+  width: 90%;
+  height: auto;
+  margin-left: 50%;
+  transform: translate(-50%);
+}
+.grass .coupon{
+  /* display: none; */
+  position: absolute;
+  z-index: 20;
+  width: 100%;
+  left: 0%;
+  text-align: center;
+}
+.coupon>img{
+  width: 100%;
+  height: auto;
+}
+.coupon button{
+  background-color: transparent;
+  border: none;
+}
+.open{
+  display: block;
+}
+.off{
+  display: none;
+}
+.grass .grass2-1{
+  top: 25%;
+  left: 7%;
+  width: 25%;
+  height: auto;
+}
+.grass .grass2-2{
+  top: 20%;
+  left: 70%;
+  width: 25%;
+  height: auto;
+}
+.grass .grass2-3{
+  bottom: 15%;
+  left: 15%;
+  width: 25%;
+  height: auto;
+}
+.grass .grass2-4{
+  bottom: 20%;
+  left: 60%;
+  width: 25%;
+  height: auto;
+}
+.grass .gift-1{
+  position: absolute;
+  top: 27%;
+  left: 10%;
+  width: 15%;
+  height: auto;
+}
+.grass .gift-2{
+  position: absolute;
+  top: 22%;
+  left: 76%;
+  width: 15%;
+  height: auto;
+}
+.grass .gift-3{
+  position: absolute;
+  bottom: 16%;
+  left: 17%;
+  width: 15%;
+  height: auto;
+}
+.grass .gift-4{
+  position: absolute;
+  bottom: 21%;
+  left: 66%;
+  width: 15%;
+  height: auto;
+}
+.grass .gift-1 img,.grass .gift-2 img,.grass .gift-3 img,.grass .gift-4 img{
+  width: 100%;
+  height: auto;
+}
+.giftopen{
+  transition: transform 1s ease-in-out;
+  transform: translateY(-90%);
+}
+.clover{
+  width: 70%;
+  height: 25%;
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+.clover img{
+  position: absolute;
+}
+.clicked{
+  animation: rotate-shake 0.6s ease;
+  transform: translateY(-50%);
+}
+.shake-all{
+  animation: rotate-shake 0.6s ease;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@keyframes rotate-shake {
+  0%, 100% { transform: rotate(0); }
+  25% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+  75% { transform: rotate(-5deg); }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+.clover img:nth-child(1){ top: -5%; left: 67%;}
+.clover img:nth-child(2){ top: -7%; left: 45%;}
+.clover img:nth-child(3){ top: -10%; left: 25%;}
+.clover img:nth-child(4){ top: -5%; left: 12%;}
+.clover img:nth-child(5){ top: 3%; left: 5%;}
+
+.clover img:nth-child(6){ top: 5%; left: 83%;}
+.clover img:nth-child(7){ top: 5%; left: 60%;}
+.clover img:nth-child(8){ top: 3%; left: 47%;}
+.clover img:nth-child(9){ top: 5%; left: 35%;}
+.clover img:nth-child(10){ top: 7%; left: 20%;}
+.clover img:nth-child(11){ top: 5%; left: 10%;}
+.clover img:nth-child(12){ top: 13%; left: -2%;}
+
+.clover img:nth-child(13){ top: 18%; left: 85%;}
+.clover img:nth-child(14){ top: 20%; left: 70%;}
+.clover img:nth-child(15){ top: 17%; left: 55%;}
+.clover img:nth-child(16){ top: 20%; left: 43%;}
+.clover img:nth-child(17){ top: 20%; left: 30%;}
+.clover img:nth-child(18){ top: 27%; left: 20%;}
+.clover img:nth-child(19){ top: 25%; left: 10%;}
+.clover img:nth-child(20){ top: 30%; left: -3%;}
+
+.clover img:nth-child(21){ top: 35%; left: 84%;}
+.clover img:nth-child(22){ top: 30%; left: 80%;}
+.clover img:nth-child(23){ top: 35%; left: 70%;}
+.clover img:nth-child(24){ top: 36%; left: 57%;}
+.clover img:nth-child(25){ top: 33%; left: 45%;}
+.clover img:nth-child(26){ top: 36%; left: 27%;}
+.clover img:nth-child(27){ top: 40%; left: 13%;}
+.clover img:nth-child(28){ top: 50%; left: 1%;}
+
+.clover img:nth-child(29){ top: 55%; left: 85%;}
+.clover img:nth-child(30){ top: 50%; left: 73%;}
+.clover img:nth-child(31){ top: 52%; left: 67%;}
+.clover img:nth-child(32){ top: 56%; left: 55%;}
+.clover img:nth-child(33){ top: 47%; left: 40%;}
+.clover img:nth-child(34){ top: 57%; left: 30%;}
+.clover img:nth-child(35){ top: 55%; left: 17%;}
+.clover img:nth-child(36){ top: 60%; left: 5%;}
+.clover img:nth-child(37){ top: 63%; left: -7%;}
+
+.clover img:nth-child(38){ top: 67%; left: 85%;}
+.clover img:nth-child(39){ top: 75%; left: 75%;}
+.clover img:nth-child(40){ top: 70%; left: 60%;}
+.clover img:nth-child(41){ top: 78%; left: 47%;}
+.clover img:nth-child(42){ top: 70%; left: 40%;}
+.clover img:nth-child(43){ top: 77%; left: 25%;}
+.clover img:nth-child(44){ top: 77%; left: 13%;}
+.clover img:nth-child(45){ top: 75%; left: 7%;}
+.clover img:nth-child(46){ top: 80%; left: -5%;}
+
+.clover img:nth-child(47){ top: 87%; left: -5%; z-index: 5; width: 110%; height: auto;}
