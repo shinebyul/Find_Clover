@@ -1,6 +1,7 @@
 
 "use client"
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [clickedIndex, setClickedIndex] = useState(null);
@@ -27,6 +28,14 @@ export default function Home() {
         }
     };
 
+    const handleDownload = () => {
+        const anchor = document.createElement('a');
+        anchor.href = '/nuni.mov'; // 동영상 파일의 경로
+        anchor.download = 'nuni.mov'; // 다운로드될 파일명
+        anchor.click();
+      };
+
+
     return(
         <div className="grass">
             <div className="clover">
@@ -41,7 +50,7 @@ export default function Home() {
                 ))}
                 <img src="/grass.png" alt="grass" />
             </div>
-            <div className="gift-1" onClick={()=>setOpen(true)}>
+            <div className="gift-1" onClick={handleDownload}>
                 <img src="/gift.png" className={`${clickedIndex===4 ? 'giftopen':''}`}/>
             </div>
             <div className="gift-2" onClick={()=>setOpen(true)}>
